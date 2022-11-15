@@ -3,11 +3,13 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(45deg, #FFEFD6, #F2DEBA);
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .calc {
    min-height: 50vh;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     background: linear-gradient(45deg, #A0E4CB, #CFF5E7);
     display: grid;
     grid-template-columns: repeat(3, 2fr);
@@ -16,7 +18,14 @@ body {
 
 }
 
-.teclas-numero {
+.visor-tela {
+    width: 88%;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+}
+
+.tecla-numero {
     width: 100px;
     height: 100px;
     border: none;
@@ -24,11 +33,19 @@ body {
     font-size: 2rem;
 }
 
-.teclas-funcao {
+.tecla-funcao {
     width: 100px;
     height: 100px;
     border: none;
     border-radius: 10px;
     margin-top: 20px;
     font-size: 1.5rem;
+}
+
+.teclas:hover {
+    background: gray;
+}
+
+.teclas:active {
+    transform: scale(0.9);
 }
