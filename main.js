@@ -18,11 +18,6 @@ function mostraValorNaTela(valorClicado) {
     telaDaCalculadora.value += valorClicado;    
 }
 
-teclaSoma.addEventListener('click', soma)
-
-function soma(valorClicado) {
-    console.log((valorClicado + valorClicado));
-}
 
 
 

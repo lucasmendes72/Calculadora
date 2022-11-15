@@ -15,8 +15,8 @@ body {
     grid-template-columns: repeat(3, 2fr);
     padding: 1rem;
     gap: 5px;
-
-}
+    box-shadow: 10px 10px 10px mediumaquamarine;
+}       
 
 .visor-tela {
     width: 88%;
