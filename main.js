@@ -33,7 +33,7 @@ function mostraValorNaTela(valorClicado) {
 teclaSoma.addEventListener('click', () => funcaoSoma())
 
 function funcaoSoma(){
-    telaDeArmazenamento.value = parseInt(telaDaCalculadora.value);
+    telaDeArmazenamento.value = parseFloat(telaDaCalculadora.value);
     telaDaCalculadora.value = ""
     telaMostraOperacao.value = "+"
 }
@@ -41,15 +41,19 @@ function funcaoSoma(){
 teclaSubtrai.addEventListener('click', () => funcaoSubtrai())
 
 function funcaoSubtrai(){
-    telaDeArmazenamento.value = parseInt(telaDaCalculadora.value);
+    if(telaDaCalculadora.value != ""){
+    telaDeArmazenamento.value = parseFloat(telaDaCalculadora.value);
     telaDaCalculadora.value = ""
     telaMostraOperacao.value = "-"
+  }else if(telaDaCalculadora.value == ""){
+    telaDaCalculadora.value += "-"
+  }
 }
 
 teclaMultiplica.addEventListener('click', () => funcaoMultiplica())
 
 function funcaoMultiplica(){
-    telaDeArmazenamento.value = parseInt(telaDaCalculadora.value);
+    telaDeArmazenamento.value = parseFloat(telaDaCalculadora.value);
     telaDaCalculadora.value = ""
     telaMostraOperacao.value = "x"
 }
@@ -58,7 +62,7 @@ function funcaoMultiplica(){
 teclaDivide.addEventListener('click', () => funcaoDivide())
 
 function funcaoDivide(){
-    telaDeArmazenamento.value = parseInt(telaDaCalculadora.value);
+    telaDeArmazenamento.value = parseFloat(telaDaCalculadora.value);
     telaDaCalculadora.value = ""
     telaMostraOperacao.value = "/"
 }
@@ -68,10 +72,10 @@ teclaIgual.addEventListener('click', () => {
 })
 
 function funcaoIgualdade(){
-    var somou = parseInt(telaDeArmazenamento.value) + parseInt(telaDaCalculadora.value)
-    var subtraiu = parseInt(telaDeArmazenamento.value) - parseInt(telaDaCalculadora.value)
-    var multiplicou = parseInt(telaDeArmazenamento.value) * parseInt(telaDaCalculadora.value)
-    var dividiu = parseInt(telaDeArmazenamento.value) / parseInt(telaDaCalculadora.value)
+    var somou = parseFloat(telaDeArmazenamento.value) + parseFloat(telaDaCalculadora.value)
+    var subtraiu = parseFloat(telaDeArmazenamento.value) - parseFloat(telaDaCalculadora.value)
+    var multiplicou = parseFloat(telaDeArmazenamento.value) * parseFloat(telaDaCalculadora.value)
+    var dividiu = parseFloat(telaDeArmazenamento.value) / parseFloat(telaDaCalculadora.value)
 
     if(telaMostraOperacao.value == '+'){
         telaDaCalculadora.value = somou;
