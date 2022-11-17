@@ -2,17 +2,17 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(45deg, #FFEFD6, #F2DEBA);
+    background: linear-gradient(90deg, #AF0171, #372948);
     justify-content: center;
     min-height: 100vh;
 }
 
 h1 {
-    color: #A0E4CB;
+    color: #FA7070;
     text-align: center;
 }
 
-.tela {
+/*.tela {
      border-radius: 20px 20px 0 0;
      background: linear-gradient(45deg, #A0E4CB, #CFF5E7);
      display: grid;
@@ -20,9 +20,90 @@ h1 {
      padding: 1rem;
      gap: 5px;
      box-shadow: 10px 10px 10px mediumaquamarine;
- } 
+ } */
 
-.calc {
+ .tela {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    padding: 1rem;
+    gap: 5px;
+    padding: 0.9em 1.6em;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+   }
+   
+   .tela::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 46, 46);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+   }
+   /* glow */
+   .tela::before {
+    content: "";
+    background: linear-gradient(
+       45deg,
+       #FF0000, #002BFF, #FF00C8, #002BFF,
+         #FF0000, #002BFF, #FF00C8, #002BFF
+   );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+   }
+   
+   @keyframes glowing {
+    0% {
+     background-position: 0 0;
+    }
+   
+    50% {
+     background-position: 400% 0;
+    }
+   
+    100% {
+     background-position: 0 0;
+    }
+   }
+   
+   /* hover */
+   .tela:hover::before {
+    opacity: 1;
+   }
+   
+   .tela:active:after {
+    background: transparent;
+   }
+   
+   .tela:active {
+    color: #000;
+    font-weight: bold;
+   }
+
+   
+
+/*.calc {
    min-height: 50vh;
     border-radius: 0 0 20px 20px;
     background: linear-gradient(45deg, #A0E4CB, #CFF5E7);
@@ -31,7 +112,87 @@ h1 {
     padding: 1rem;
     gap: 5px;
     box-shadow: 10px 10px 10px mediumaquamarine;
-}  
+}  */
+
+.calc {
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    padding: 1rem;
+    gap: 5px;
+    padding: 0.9em 1.6em;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+   }
+   
+   .calc::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 46, 46);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+   }
+   /* glow */
+   .calc::before {
+    content: "";
+    background: linear-gradient(
+       45deg,
+       #FF0000, #002BFF, #FF00C8, #002BFF,
+         #FF0000, #002BFF, #FF00C8, #002BFF
+   );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+   }
+   
+   @keyframes glowing {
+    0% {
+     background-position: 0 0;
+    }
+   
+    50% {
+     background-position: 400% 0;
+    }
+   
+    100% {
+     background-position: 0 0;
+    }
+   }
+   
+   /* hover */
+   .calc:hover::before {
+    opacity: 1;
+   }
+   
+   .calc:active:after {
+    background: transparent;
+   }
+   
+   .calc:active {
+    color: #000;
+    font-weight: bold;
+   }
 
 .visor-operacao {
     height: 10px;
@@ -53,7 +214,7 @@ h1 {
     font-size: 2.5rem;
 }
 
-.teclas {
+/*.teclas {
     width: 100px;
     height: 100px;
     border: none;
@@ -67,4 +228,37 @@ h1 {
 
 .teclas:active {
     transform: scale(0.9);
-}
+}*/
+
+.teclas {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid rgb(252, 70, 100);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+   }
+   
+   .teclas::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 70, 100);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+   }
+   
+   .teclas:hover::before {
+    transform: translateX(0);
+   }
