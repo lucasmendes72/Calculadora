@@ -12,15 +12,12 @@ h1 {
     text-align: center;
 }
 
-/*.tela {
-     border-radius: 20px 20px 0 0;
-     background: linear-gradient(45deg, #A0E4CB, #CFF5E7);
-     display: grid;
-     grid-template-columns: repeat(1, 2fr);
-     padding: 1rem;
-     gap: 5px;
-     box-shadow: 10px 10px 10px mediumaquamarine;
- } */
+.tela input {
+    color: #FD841F;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+ }
 
  .tela {
     display: grid;
@@ -100,19 +97,6 @@ h1 {
     color: #000;
     font-weight: bold;
    }
-
-   
-
-/*.calc {
-   min-height: 50vh;
-    border-radius: 0 0 20px 20px;
-    background: linear-gradient(45deg, #A0E4CB, #CFF5E7);
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    padding: 1rem;
-    gap: 5px;
-    box-shadow: 10px 10px 10px mediumaquamarine;
-}  */
 
 .calc {
     min-height: 50vh;
@@ -198,7 +182,7 @@ h1 {
     height: 10px;
     border: none;
     padding: 5px;
-    background-color: #D6E4E5;
+    background-color: grey;
 }
 
 .visor-tela {
@@ -206,7 +190,7 @@ h1 {
     border: none;
     border-radius: 8px 8px 0 0;
     padding: 15px;
-    background-color: #D6E4E5;
+    background-color: grey;
 }
 
 .tecla-funcao {
@@ -214,26 +198,10 @@ h1 {
     font-size: 2.5rem;
 }
 
-/*.teclas {
-    width: 100px;
-    height: 100px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.5rem;
-}
-
-.teclas:hover {
-    background: gray;
-}
-
-.teclas:active {
-    transform: scale(0.9);
-}*/
-
 .teclas {
     display: inline-block;
     padding: 0.9rem 1.8rem;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     color: white;
     border: 3px solid rgb(252, 70, 100);
